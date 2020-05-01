@@ -4,15 +4,62 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#header {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas: "logo image"
+                       "caption caption";
+  grid-template-rows: 360px auto;
+  grid-template-columns: 1.2fr 4fr;
+}
+
+
+#logo {
+  background-image: url("https://svgshare.com/i/KhS.svg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  min-width: 360px;
+  min_height: 360px;
+  background-position: center;
+}
+
+@media only screen and (min-width: 800px) {
+ #logo {
+    max-width: 320px;
+    background-position: center;
+  }
+}
+
+#image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Johannes_Itten_%28retuschiert%29.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: 0px 20%;
+}
+
+#caption {
+  grid-area: caption;
+  font-size: 24px;
+  color: white;
+  padding: 2em;
+  text-align: center;
+  background-color: black;
+}
+
 .timeline_grid {
   display: grid;
   grid-template-columns: 1.2fr 4fr;
+  grid-template-rows: repeat(auto-fit,);
+  align-items: center;
 }
 
 .dates{
   font-size: 64px;
-  text-align: center;
   height: 100%;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
 }
 
 .events{
@@ -20,5 +67,71 @@ html, body {
   padding: 2em 2em 2em 3em;
 }
 
+@media only screen and (max-width: 1000px) {
+ .dates {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+ .events {
+    font-size: 24px;
+    padding: 1em 1em 1em 1.5em;
+  }
+}
+
 .itemD1 {color:#D9CAF1; background:#6E65BF;}
+.itemD2 {color:#CAC8EF; background: #4D6CC7;}
+.itemD3 {color:#C4CDF4; background: #306EC7;}
+.itemD4 {color:#C8D9F5; background: #317DC8;}
+.itemD5 {color:#CAE3E7; background: #43938F;}
+.itemD6 {color:#D1E2C5; background: #6EA738;}
+.itemD7 {color:#FAEB9F; background: #D7B941;}
+.itemD8 {color:#F7D6BB; background: #F09C41;}
+.itemD9 {color:#F5C6CC; background: #EB693A;}
+.itemD10 {color:#F5C6CC; background: #EA4A37;}
+.itemD11 {color:#F3BDD5; background: #E94871;}
+.itemD12{ color:#E9CBE7; background: #BE6AB4;}
+.itemD13 {color:#D9CAF1; background:#6E65BF;}
+.itemD14 {color:#CAC8EF; background: #4D6CC7;}
+.itemD15 {color:#C4CDF4; background: #306EC7;}
+.itemD16 {color:#C8D9F5; background: #317DC8;}
+.itemD17 {color:#CAE3E7; background: #43938F;}
+.itemD18 {color:#D1E2C5; background: #6EA738;}
+.itemD19 {color:#FAEB9F; background: #D7B941;}
+
 .itemE1 {color:#FAEB9F; background: #D7B941;}
+.itemE2 {color:#F7D6BB; background: #F09C41;}
+.itemE3 {color:#F5C6CC; background: #EB693A;}
+.itemE4 {color:#F5C6CC; background: #EA4A37;}
+.itemE5 {color:#F3BDD5; background: #E94871;}
+.itemE6 {color:#E9CBE7; background: #BE6AB4;}
+.itemE7 {color:#D9CAF1; background:#6E65BF;}
+.itemE8 {color:#CAC8EF; background: #4D6CC7;}
+.itemE9 {color:#C4CDF4; background: #306EC7;}
+.itemE10 {color:#C8D9F5; background: #317DC8;}
+.itemE11 {color:#CAE3E7; background: #43938F;}
+.itemE12 {color:#D1E2C5; background: #6EA738;}
+.itemE13 {color:#FAEB9F; background: #D7B941;}
+.itemE14 {color:#F7D6BB; background: #F09C41;}
+.itemE15 {color:#F5C6CC; background: #EB693A;}
+.itemE16 {color:#F5C6CC; background: #EA4A37;}
+.itemE17 {color:#F3BDD5; background: #E94871;}
+.itemE18 {color:#E9CBE7; background: #BE6AB4;}
+.itemE19 {color:#D9CAF1; background:#6E65BF;}
+
+#footer {
+  font-size: 24px;
+  color: white;
+  padding: 4em;
+  text-align: center;
+  background-color: black;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: blue;
+}
