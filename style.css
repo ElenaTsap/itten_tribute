@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   height: auto;
   grid-template-areas: "logo image"
-                       "caption caption";
+                        "caption caption";
   grid-template-rows: 360px auto;
   grid-template-columns: 1.2fr 4fr;
 }
